@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.header >li {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 30px;
+}
+
+.contact-card {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-card-content {
+  width:25%;
+  border: 2px solid rgba(17, 5, 87, 0.133);
+  background: rgb(80, 250, 236);
+  border-radius: 20px;
+}
+
+.form-submit {
+  margin-top: 20px;
+}
+
+.button-delete {
+  float: right;
+  position: relative;
+  top:20px;
+  right: 20px;
+}
