@@ -51,14 +51,26 @@ class Form extends Component {
 
     addContact(event) {
         event.preventDefault();
-        this.props.addContact(this.state.contact);
-        this.setState({
-            contact: {
-                name: '',
-                phone: '',
-                email: ''
-            }
-        });
+        if (this.state.contact.name !== '' && this.state.contact.phone !== '' && this.state.contact.email !== ''){
+            this.props.addContact(this.state.contact);
+            this.setState({
+                contact: {
+                    name: '',
+                    phone: '',
+                    email: ''
+                }
+            });
+        }
+        else {
+            alert("Заполните все поля");
+            this.setState({
+                contact: {
+                    name: '',
+                    phone: '',
+                    email: ''
+                }
+            });
+        }
     }
 
     render() {

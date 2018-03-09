@@ -2,6 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #fff;
+}
+
+.App > h1 {
+  color: rgb(255, 255, 255);
+  background: rgb(49, 11, 151);
+  margin-top: 0;
+  height: 60px;
+  line-height: 60px;
 }
 
 .header >li {
@@ -14,15 +23,29 @@ body {
 .contact-card {
   width:100%;
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: center; 
 }
 
 .contact-card-content {
-  width:25%;
-  border: 2px solid rgba(17, 5, 87, 0.133);
-  background: rgb(80, 250, 236);
-  border-radius: 20px;
+  width:100%;
+  margin-top: 50px;
+}
+
+.contact-card-content > h2 {
+  float: left;
+  display: inline-block;
+  margin-left: 40px;
+  color: rgb(9, 110, 97);
+}
+
+.contact-card-content > p {
+  display: inline-block;
+  margin-left: 350px;
+}
+
+.input-form>div {
+  display: inline-block;
+  margin-right: 70px;
 }
 
 .form-submit {
@@ -34,4 +57,20 @@ body {
   position: relative;
   top:20px;
   right: 20px;
+}
+
+@media screen and (max-width:870px) {
+  .input-form>div {
+    display: block;
+  }
+  .contact-card-content > p {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (max-width:630px) {
+  .contact-card-content > p {
+    margin-left: 20px;
+    font-size: 15px;
+  }
 }

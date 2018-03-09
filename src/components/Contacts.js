@@ -42,8 +42,8 @@ class Contacts extends Component {
                 <div className = 'contact-card-content'>
                     <input type = "submit" value = "Delete" className="button-delete" onClick = {this.deleteContact.bind(this, contact)} />
                     <h2>{contact.name}</h2>
-                    <p>Phone: {contact.phone}</p>
-                    <p>Email: {contact.email}</p>
+                    <p>{contact.phone}</p>
+                    <p>{contact.email}</p>
                 </div>
             </div>
         );
@@ -54,12 +54,12 @@ class Contacts extends Component {
         <div>
         <ul className="header">
             {!this.state.mountedForm &&<input type="submit" value="Add contact" onClick = {this.handleSubmit} />}
-            <li> Favorites </li>
         </ul>
         {this.state.mountedForm && <Form addContact={this.addContact} />}
-        {!this.state.mountedForm && <div className="contacts"> 
-            {this.state.contacts.map(this.createContactCard, this)} 
-        </div>}
+        {!this.state.mountedForm && 
+            <div className="contacts"> 
+                {this.state.contacts.map(this.createContactCard, this)} 
+            </div>}
         </div>
        );      
     }
